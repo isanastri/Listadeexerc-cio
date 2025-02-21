@@ -136,7 +136,12 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      H["Sua resposta aqui!"]
+        A((Início)) --> B[Digite um número]
+        B --> C{Número % 2 = 0?}
+        C -- Sim --> D[\Exibir 'O número é par'\]
+        C -- Não --> E[\Exibir 'O número é ímpar'\]
+        D --> F((fim))
+     E --> F
    ```
    
 10. Elabore um fluxograma para verificar se um número digitado pelo usuário é primo.
