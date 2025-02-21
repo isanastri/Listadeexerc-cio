@@ -70,7 +70,12 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      D["Sua resposta aqui!"]
+      flowchart TD
+      A((Início)) --> B[\Informe sua idade\]
+      B --> C{Se o número for >=16}
+      C --> D{Possuí Título de Eleitor?}
+      D --> Sim -->E[Pode votar]
+      C --> Não --> F[Não pode votar]
    ```
    
 6. Crie um fluxograma que leia dois números e determine o maior entre eles.
