@@ -123,7 +123,17 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      G["Sua resposta aqui!"]
+        A((Início)) --> B[\digite o numero n\]
+        B --> C{n >= 0?}
+        C -- Não --> D[\Número inválido\]
+        C -- Sim --> E[\Inicializar fatorial = 1\]
+        E --> F{n > 0?}
+        F -- Sim --> G[\fatorial = fatorial * n\]
+        G --> H[\n = n - 1\]
+        H --> F
+        F -- Não --> I[\Exibir Fatorial = fatorial\]
+        D --> J((fim))
+        I --> J1
    ```
    
 9. Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
