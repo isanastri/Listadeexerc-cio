@@ -82,7 +82,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-       A((Início)) --> B[\número 1\]
+       A((Início)) --> B[\Número 1\]
         B --> C[\número 2\]
         C --> D{Número 1 > Número 2?}
         D -- Sim --> E[\Exibir 'Número 1 é o maior'\]
@@ -123,12 +123,12 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-        A((Início)) --> B[\digite o numero n\]
+        A((Início)) --> B[\Digite o numero n\]
         B --> C{n >= 0?}
         C -- Não --> D[\Número inválido\]
         C -- Sim --> E[\Inicializar fatorial = 1\]
         E --> F{n > 0?}
-        F -- Sim --> G[\fatorial = fatorial * n\]
+        F -- Sim --> G[\Fatorial = fatorial * n\]
         G --> H[\n = n - 1\]
         H --> F
         F -- Não --> I[\Exibir Fatorial = fatorial\]
@@ -148,8 +148,8 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    flowchart TD
         A((Início)) --> B[Digite um número]
         B --> C{Número % 2 = 0?}
-        C -- Sim --> D[\Exibir 'O número é par'\]
-        C -- Não --> E[\Exibir 'O número é ímpar'\]
+        C -- Sim --> D[\O número é par\]
+        C -- Não --> E[\O número é ímpar]
         D --> F((fim))
      E --> F
    ```
@@ -158,5 +158,17 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      I["Sua resposta aqui!"]
+        A((Início)) --> B[\Informe um número n\]
+        B --> C{n <= 1?}
+        C -- Sim --> D[\O número não é primo\]
+        C -- Não --> E[\Iniciar divisor = 2\]
+        E --> F{divisor < n?}
+        F -- Sim --> G{n % divisor == 0?}
+        G -- Sim --> H[\O número não é primo\]
+        G -- Não --> I[\Incrementar divisor\]
+        I --> F
+        F -- Não --> J[\O número é primo\]
+        D --> K((fim))
+        H --> K
+        J --> K
    ```
