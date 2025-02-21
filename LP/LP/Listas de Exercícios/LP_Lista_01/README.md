@@ -82,14 +82,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      E["Sua resposta aqui!"]
-   ```
-   
-7. Crie um fluxograma que leia três números e determine o maior entre eles.
-   
-   ```mermaid
-    flowchart TD
-   A((Início)) --> B[\número 1\]
+       A((Início)) --> B[\número 1\]
         B --> C[\número 2\]
         C --> D{Número 1 > Número 2?}
         D -- Sim --> E[\Exibir 'Número 1 é o maior'\]
@@ -99,6 +92,31 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
         E --> I[Fim]
         G --> I
         H --> I
+   ```
+   
+7. Crie um fluxograma que leia três números e determine o maior entre eles.
+   
+   ```mermaid
+    flowchart TD
+  A((Início)) --> B[Digite o número 1]
+        B --> C[Digite o número 2]
+        C --> D[Digite o número 3]
+        D --> E{Número 1 > Número 2?}
+        E -- Sim --> F{Número 1 > Número 3?}
+        E -- Não --> G{Número 2 > Número 3?}
+        F -- Sim --> H[\Exibir Número 1 é o maior\]
+        F -- Não --> I{Número 1 = Número 3?}
+        I -- Sim --> J[\Exibir Número 1 e 3 são iguais\]
+        I -- Não --> K[\Exibir Número 3 é o maior\]
+        G -- Sim --> L[\Exibir Número 2 é o maior\]
+        G -- Não --> M{Número 2 = Número 3?}
+        M -- Sim --> N[\Exibir 'Número 2 e 3 são iguais'\]
+        M -- Não --> K
+        H --> O((Fim))
+        J --> O
+        L --> O
+        K --> O
+        N --> O
    ```
    
 8. Construa um fluxograma para calcular o fatorial de um número fornecido pelo usuário.
