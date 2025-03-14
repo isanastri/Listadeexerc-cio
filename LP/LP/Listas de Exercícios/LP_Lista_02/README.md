@@ -17,6 +17,21 @@ Para mais informações acesse [Aula 03: Fluxogramas.](https://cainaantunes.noti
 ***
 
 1. Ler um número inteiro e exibir o seu dobro.
+import java.util.Scanner
+
+public class Main{
+      public static void main(String[] args){
+      int number;
+
+      System.out.println("Digite ym numero: ");
+
+      Scanner in = new Scanner(System.in); //Configura o Scanner
+      number = in.nextInt();
+
+      result = number = 2
+      System.out.println("O dobro de " + number + " é " + result);
+  }
+}
 
 2. Ler um número inteiro e exibir o seu quadrado.
 
