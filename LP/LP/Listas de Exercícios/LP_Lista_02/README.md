@@ -17,23 +17,32 @@ Para mais informações acesse [Aula 03: Fluxogramas.](https://cainaantunes.noti
 ***
 
 1. Ler um número inteiro e exibir o seu dobro.
-import java.util.Scanner
+import java.util.Scanner;
 
-public class Main{
-      public static void main(String[] args){
-      int number;
+public class Main {
+    public static void main(String[] args) {
+        int number, result;
 
-      System.out.println("Digite ym numero: ");
+        System.out.println("Digite um numero: ");
 
-      Scanner in = new Scanner(System.in); //Configura o Scanner
-      number = in.nextInt();
+        Scanner in = new Scanner(System.in); //Configura o Scanner
+        number = in.nextInt();
 
-      result = number = 2
-      System.out.println("O dobro de " + number + " é " + result);
-  }
+        result = number * 2;
+        System.out.println("O dobro de " + number + " é " + result);
+    }
 }
 
 2. Ler um número inteiro e exibir o seu quadrado.
+public class Main {
+      public static void main(Strings[] args){
+            int number, result;
+
+            System.out.println("Digite um número: ")
+            Scanner in = new Scanner(System.in); //Configura o Scanner
+            
+      }
+}
 
 3. Ler um número real e exibir a quinta parte deste número.
 
