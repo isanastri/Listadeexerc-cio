@@ -99,10 +99,56 @@ public class Main {
 }
 
 6. Ler uma velocidade em $m/s$ e converter para $km/h$.
+import java.util.Scanner;
+public class Main{
+      public static void main(String[ args]){
+            double velocidadeMs, velocidadeKmH;
+
+            Scanner in = new Scanner(System.in);
+
+            System.out.println("Digite a velocidade em m/s: ");
+        velocidadeMs = in.nextDouble();
+
+        velocidadeKmH = velocidadeMs * 3.6;
+        System.out.println("A velocidade em Km/h é: " + velocidadeKmH);
+
+      }
+
+}
 
 7. Ler uma medida em milímetro e converter para polegadas.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double milimetros, polegadas;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Digite a medida em milímetros: ");
+        milimetros = in.nextDouble();
+
+        polegadas = milimetros / 25.4;
+        System.out.println("A medida em polegadas é: " + polegadas);
+    }
+}
 
 8. Ler uma medida em polegadas e converter para milímetros.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double polegadas, milimetros;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Digite a medida em polegadas: ");
+        polegadas = in.nextDouble();
+
+        milimetros = polegadas * 25.4;
+        System.out.println("A medida em milímetros é: " + milimetros);
+    }
+}
 
 9. Ler uma medida de distância em quilômetros e converter 
 para milhas.
