@@ -34,14 +34,20 @@ public class Main {
 }
 
 2. Ler um número inteiro e exibir o seu quadrado.
-public class Main {
-      public static void main(Strings[] args){
-            int number, result;
+import java.util.Scanner;
 
-            System.out.println("Digite um número: ")
-            Scanner in = new Scanner(System.in); //Configura o Scanner
-            
-      }
+public class Main {
+    public static void main(String[] args) {
+        int number, square;
+
+        System.out.println("Digite um número inteiro: ");
+
+        Scanner in = new Scanner(System.in); // Configura o Scanner
+        number = in.nextInt();
+
+        square = number * number; // Calcula o quadrado
+        System.out.println("O quadrado de " + number + " é " + square);
+    }
 }
 
 3. Ler um número real e exibir a quinta parte deste número.
@@ -107,13 +113,11 @@ public class Main{
             Scanner in = new Scanner(System.in);
 
             System.out.println("Digite a velocidade em m/s: ");
-        velocidadeMs = in.nextDouble();
+            velocidadeMs = in.nextDouble();
 
-        velocidadeKmH = velocidadeMs * 3.6;
-        System.out.println("A velocidade em Km/h é: " + velocidadeKmH);
-
+            velocidadeKmH = velocidadeMs * 3.6;
+            System.out.println("A velocidade em Km/h é: " + velocidadeKmH);
       }
-
 }
 
 7. Ler uma medida em milímetro e converter para polegadas.
@@ -152,13 +156,47 @@ public class Main {
 
 9. Ler uma medida de distância em quilômetros e converter 
 para milhas.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double km, miles;
+
+        System.out.println("Digite uma medida em quilômetros: ");
+
+        Scanner in = new Scanner(System.in);
+        km = in.nextDouble();
+
+        miles = km * 0.621371; // Conversão para milhas
+        System.out.println(km + " km equivale a " + miles + " milhas.");
+    }
+}
+
 10. Ler uma medida de distância em milhas e converter para quilômetros.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    }
+}
 
 11. Entrar com o valor de temperatura em graus Celsius e exibir a temperaturacorrespondente em graus Fahrenheit.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    }
+}
 
 12. Ler duas notas N1 e N2 e exibir a média. 
 
       >Obs.: N1 tem peso 1 e N2 tem peso 2 e resultadodeve estar entre 0 e 10.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    }
+}
 
 13. Receber o raio e um círculo e calcular sua área.
 
