@@ -45,10 +45,58 @@ public class Main {
 }
 
 3. Ler um número real e exibir a quinta parte deste número.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double numero, quintaParte;
+
+        System.out.println("Digite um número real: ");
+
+        Scanner in = new Scanner(System.in);
+        numero = in.nextDouble();
+
+        quintaParte = numero / 5;
+        System.out.println("A quinta parte de " + numero + " é " + quintaParte);
+    }
+}
 
 4. Ler duas notas N1 e N2 e exibir a média.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double nota1, nota2, media;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Digite a primeira nota (N1): ");
+        nota1 = in.nextDouble();
+
+        System.out.println("Digite a segunda nota (N2): ");
+        nota2 = in.nextDouble();
+
+        media = (nota1 + nota2) / 2;
+        System.out.println("A média das notas é: " + media);
+    }
+}
 
 5. Ler uma velocidade em $Km/h$ e converter para $m/s$.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double velocidadeKmH, velocidadeMs;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Digite a velocidade em Km/h: ");
+        velocidadeKmH = in.nextDouble();
+
+        velocidadeMs = velocidadeKmH / 3.6;
+        System.out.println("A velocidade em m/s é: " + velocidadeMs);
+    }
+}
 
 6. Ler uma velocidade em $m/s$ e converter para $km/h$.
 
