@@ -154,7 +154,7 @@ public class Main {
     }
 }
 
-9. Ler uma medida de distância em quilômetros e converter 
+ 9.Ler uma medida de distância em quilômetros e converter 
 para milhas.
 import java.util.Scanner;
 
@@ -177,24 +177,57 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        double miles, km;
+
+        System.out.println("Digite uma medida em milhas: ");
+
+        Scanner in = new Scanner(System.in);
+        miles = in.nextDouble();
+
+        km = miles / 0.621371; // Conversão para quilômetros
+        System.out.println(miles + " milhas equivale a " + km + " km.");
     }
 }
+
 
 11. Entrar com o valor de temperatura em graus Celsius e exibir a temperaturacorrespondente em graus Fahrenheit.
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        double celsius, fahrenheit;
+
+        System.out.println("Digite a temperatura em graus Celsius: ");
+
+        Scanner in = new Scanner(System.in);
+        celsius = in.nextDouble();
+
+        fahrenheit = (celsius * 9/5) + 32; // Conversão para Fahrenheit
+        System.out.println(celsius + " °C equivale a " + fahrenheit + " °F.");
     }
 }
-
-12. Ler duas notas N1 e N2 e exibir a média. 
+ 12. Ler duas notas N1 e N2 e exibir a média. 
 
       >Obs.: N1 tem peso 1 e N2 tem peso 2 e resultadodeve estar entre 0 e 10.
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        double n1, n2, media;
+
+        System.out.println("Digite a nota N1: ");
+        Scanner in = new Scanner(System.in);
+        n1 = in.nextDouble();
+
+        System.out.println("Digite a nota N2: ");
+        n2 = in.nextDouble();
+
+        media = (n1 * 1 + n2 * 2) / 3; // Média ponderada
+        if (media >= 0 && media <= 10) {
+            System.out.println("A média ponderada é: " + media);
+        } else {
+            System.out.println("Notas inválidas. A média deve estar entre 0 e 10.");
+        }
     }
 }
 
