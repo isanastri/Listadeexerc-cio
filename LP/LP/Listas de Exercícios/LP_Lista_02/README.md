@@ -222,9 +222,11 @@ public class Main {
         System.out.println("Digite a nota N2: ");
         n2 = in.nextDouble();
 
-        media = (n1  + 2*n2) / 3;
+        media = (n1 * 1 + n2 * 2) / 3; // Média ponderada
         if (media >= 0 && media <= 10) {
-            System.out.println("A média  é: " + media);
+            System.out.println("A média ponderada é: " + media);
+        } else {
+            System.out.println("Notas inválidas. A média deve estar entre 0 e 10.");
         }
     }
 }
