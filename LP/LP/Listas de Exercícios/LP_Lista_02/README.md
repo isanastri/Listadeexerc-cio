@@ -107,7 +107,7 @@ public class Main {
 6. Ler uma velocidade em $m/s$ e converter para $km/h$.
 import java.util.Scanner;
 public class Main{
-      public static void main(String[ args]){
+      public static void main(String[] args){
             double velocidadeMs, velocidadeKmH;
 
             Scanner in = new Scanner(System.in);
@@ -232,12 +232,77 @@ public class Main {
 }
 
 13. Receber o raio e um círculo e calcular sua área.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        double radius, area;
+
+        System.out.println("Digite o raio do círculo: ");
+
+        Scanner in = new Scanner(System.in);
+        radius = in.nextDouble();
+
+        area = Math.PI * Math.pow(radius, 2);
+        System.out.println("A área do círculo é: " + area);
+    }
+}
 
 14. Receber a base e a altura de um triângulo retângulo e calcular sua área.
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        double base, height, area;
+
+        System.out.println("Digite a base do triângulo: ");
+        Scanner in = new Scanner(System.in);
+        base = in.nextDouble();
+
+        System.out.println("Digite a altura do triângulo: ");
+        height = in.nextDouble();
+
+        area = (base * height) / 2;
+        System.out.println("A área do triângulo é: " + area);
+    }
+}
 15. Receber o raio e a altura de um cilindro e calcular seu volume.
+import java.util.Scanner;
+public class   Main {
+    public static void main(String[] args) {
+        double radius, height, volume;
+
+        System.out.println("Digite o raio do cilindro: ");
+        Scanner in = new Scanner(System.in);
+        radius = in.nextDouble();
+
+        System.out.println("Digite a altura do cilindro: ");
+        height = in.nextDouble();
+
+        volume = Math.PI * Math.pow(radius, 2) * height;
+        System.out.println("O volume do cilindro é: " + volume);
+    }
+}
+
 
 16. Receber o raio e a altura de um cone e calcular seu volume.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double radius, height, volume;
+
+        System.out.println("Digite o raio do cone: ");
+        Scanner in = new Scanner(System.in);
+        radius = in.nextDouble();
+
+        System.out.println("Digite a altura do cone: ");
+        height = in.nextDouble();
+
+        volume = (Math.PI * Math.pow(radius, 2) * height) / 3;
+        System.out.println("O volume do cone é: " + volume);
+    }
+}
+
 
 17. Receber velocidade inicial, aceleração e tempo de percurso de um corpo e calcular sua velocidade.
 
