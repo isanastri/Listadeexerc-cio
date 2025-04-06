@@ -222,11 +222,9 @@ public class Main {
         System.out.println("Digite a nota N2: ");
         n2 = in.nextDouble();
 
-        media = (n1 * 1 + n2 * 2) / 3; // Média ponderada
+        media = (n1  + 2*n2) / 3;
         if (media >= 0 && media <= 10) {
-            System.out.println("A média ponderada é: " + media);
-        } else {
-            System.out.println("Notas inválidas. A média deve estar entre 0 e 10.");
+            System.out.println("A média  é: " + media);
         }
     }
 }
@@ -305,14 +303,85 @@ public class Main {
 
 
 17. Receber velocidade inicial, aceleração e tempo de percurso de um corpo e calcular sua velocidade.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double initialVelocity, acceleration, time, finalVelocity;
+
+        System.out.println("Digite a velocidade inicial (m/s): ");
+        Scanner in = new Scanner(System.in);
+        initialVelocity = in.nextDouble();
+
+        System.out.println("Digite a aceleração (m/s²): ");
+        acceleration = in.nextDouble();
+
+        System.out.println("Digite o tempo de percurso (s): ");
+        time = in.nextDouble();
+
+        finalVelocity = initialVelocity + (acceleration * time);
+        System.out.println("A velocidade final é: " + finalVelocity + " m/s");
+    }
+}
 
 18. Receber os coeficientes $a$ e $b$ de uma equação do primeiro grau e imprimir a solução.
 
       >Equação do primeiro grau: $ax + b = 0$
+      import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double a, b, solution;
+
+        System.out.println("Digite o coeficiente a: ");
+        Scanner in = new Scanner(System.in);
+        a = in.nextDouble();
+
+        if (a == 0) {
+            System.out.println("Esta não é uma equação válida.");
+        } else {
+            System.out.println("Digite o coeficiente b: ");
+            b = in.nextDouble();
+
+            solution = -b / a;
+            System.out.println("A solução da equação " + a + "x + " + b + " = 0 é: x = " + solution);
+        }
+    }
+}
 
 19. Receber os coeficientes $a$, $b$ e $c$ de uma equação do segundo grau e imprimir a solução.
 
       >Equação do segundo grau: $ax^2 + bx + c = 0$
+      import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double a, b, c, delta, root1, root2;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Digite o coeficiente a: ");
+        a = in.nextDouble();
+        System.out.println("Digite o coeficiente b: ");
+        b = in.nextDouble();
+        System.out.println("Digite o coeficiente c: ");
+        c = in.nextDouble();
+
+        // Calcula o discriminante (delta)
+        delta = Math.pow(b, 2) - 4 * a * c;
+
+        if (delta < 0) {
+            System.out.println("A equação não possui raízes reais.");
+        } else {
+            root1 = (-b + Math.sqrt(delta)) / (2 * a);
+            root2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+            System.out.println("As raízes da equação são: ");
+            System.out.println("Raiz 1: " + root1);
+            System.out.println("Raiz 2: " + root2);
+        }
+    }
+}
 
 20. Descobrir uma equação do segundo grau a partir de suas raízes:
 
@@ -322,3 +391,25 @@ public class Main {
       $(x -1) . (x -2)$ <br>
       Logo: <br>
       $x2 -3x -2 = 0$ <br>
+      import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double x1, x2, a, b, c;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Digite a primeira raiz (x1): ");
+        x1 = in.nextDouble();
+        System.out.println("Digite a segunda raiz (x2): ");
+        x2 = in.nextDouble();
+
+        // Considerando a = 1 para simplificar
+        a = 1;
+        b = -(x1 + x2); // Coeficiente b
+        c = x1 * x2;    // Coeficiente c
+
+        System.out.println("A equação do segundo grau é: ");
+        System.out.println(a + "x^2 + (" + b + ")x + (" + c + ") = 0");
+    }
+}
